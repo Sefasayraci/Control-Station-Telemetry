@@ -44,7 +44,7 @@ using System.Runtime.ConstrainedExecution;
 // FORM BORDER STYLE KAPATIIM, İLERİ Kİ ZAMANDA AÇABİLİRİM - IMAGE BUTTON EKLENİP DEĞİŞTİRİLEBİLİR. 
 // GÖREV YÜKÜ İÇİN GPS VERİLER KOYULACAK
 // 5 HZ DE BİR VERİ İSTENİYOR *5 Hz frekansla (her farklı veri grubundan saniyede 5 veri yayımlanması) yer istasyonuna iletmesi gerekmektedir.* ÖNEMLİ TEPE NOKTASINDAN İTİBAREN
-// KTR'DEN SONRA YER İSTASYONU FTD Dİ İLE PAKET GÖNDERME SEÇENEĞİ OLACAK
+// YER İSTASYONU FTD Dİ İLE PAKET GÖNDERME SEÇENEĞİ OLACAK
 // GÖREV YÜKÜNDE BASINÖ SENSÖRÜ KULLANILMASI DURUMUDA GERÇEKLEŞCEKTİR. BUNUN İÇİN YER İSTASYONUNU AYARLA
 // BUZZER TEXTBOX'A YERLEŞECEK.
 // NEM VERİSİ EKLENECEK.
@@ -54,9 +54,9 @@ using System.Runtime.ConstrainedExecution;
 // TAKIM ID Sİ GÖNDER
 // AYRI BİR PORT AÇ VE YER İSTASYONUNA GÖNDER HAKEM YER İSTASYONUNA 11520 OLACAK
 // HER VERİ GİTTİĞİNDE SAYACA +1 EKLENECEK BUNUDA LABEL KOY
-// ARAYÜZ LOORA İLE HABERLEŞMESİ GERÇEKLEŞTİ VE COM SEÇNEĞİDE DEĞİŞTİRİLDİ. ARTIK BUNA GÖRE TASARIM YAPILIYOR. AYRICA PORT SEÇNEĞİNİN YAZILIMINI BİR VİDEODA FİXAJ YAPTI ORAYA BAKABİLİRSİN. VERİ ALMADA MPU6050 SENSÖR EKLENDİ.
+// ARAYÜZ LOORA İLE HABERLEŞMESİ GERÇEKLEŞTİ VE COM SEÇNEĞİDE DEĞİŞTİRİLDİ. ARTIK BUNA GÖRE TASARIM YAPILIYOR. AYRICA PORT SEÇNEĞİNİN YAZILIMINI BAKABİLİRSİN. VERİ ALMADA MPU6050 SENSÖR EKLENDİ.
 // AÇI VERİSİ EKLENECEK.
-// NEM SENSÖR VERİSİ OLACAK MI DİYE TEKNOFEST MAİLİ KONTROL EDİLECEK.
+// NEM SENSÖR VERİSİ OLACAK MI?
 // TAKIM ID VE PAKET SAYISI İÇİN KONTROL PANELİNE VERİ İÇİN COMBOBOX EKLENİP YAZILACAK. VE BU ID UÇUŞ KODUNA EKLENECEK.
 // ALTTAKİ BEYAZ CHART KONTROL EDİLECEK
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -470,13 +470,13 @@ namespace tulpar_ground
             dataGridView1.Rows[satir].Cells[10].Value = pot[3];
             dataGridView1.Rows[satir].Cells[11].Value = pot[4];
             dataGridView1.Rows[satir].Cells[12].Value = pot[5];
-            /*dataGridView1.Rows[satir].Cells[6].Value = pot[5];
+            dataGridView1.Rows[satir].Cells[6].Value = pot[5];
             dataGridView1.Rows[satir].Cells[7].Value = pot[6];
             dataGridView1.Rows[satir].Cells[8].Value = pot[7];
             dataGridView1.Rows[satir].Cells[9].Value = pot[8];
             dataGridView1.Rows[satir].Cells[10].Value = pot[9];
             dataGridView1.Rows[satir].Cells[11].Value = pot[10];
-            dataGridView1.Rows[satir].Cells[12].Value = pot[11];                    */        // enlem boylam verisi eksik sadece textbox'a eklenecek
+            dataGridView1.Rows[satir].Cells[12].Value = pot[11];                            // enlem boylam verisi eksik sadece textbox'a eklenecek
 
             dataGridView1.Rows[satir].Cells[13].Value = DateTime.Now.ToLongTimeString();    // EN BAŞA STRİNG OLARAK EKLEDİĞİMİZ KOD KISMINDA SÜRE İLERLEMEDİĞİ İÇİN UZUN ZAMAN ZARFI OLARAK DATATİME I BURAYA EKLEDİM
             dataGridView1.Rows[satir].Cells[14].Value = yeni.ToShortDateString();
@@ -500,19 +500,19 @@ namespace tulpar_ground
                    textBox10.Text = pot[3] + "";
                    textBox11.Text = pot[4] + "";
                     textBox12.Text = pot[5] + "";
-                    /*textBox6.Text = pot[5] + "";
+                    textBox6.Text = pot[5] + "";
                     textBox7.Text = pot[6] + "";
                     textBox8.Text = pot[7] + "";
                     textBox9.Text = pot[8] + "";
                     textBox10.Text = pot[9] + "";
                     textBox11.Text = pot[10] + "";
-                    textBox12.Text = pot[11] + "";*/
+                    textBox12.Text = pot[11] + "";
                     // enlem boylam verisi eksik sadece textbox'a eklenecek
 
-                /* this.chart1.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[1]);
+                 this.chart1.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[1]);
                  this.chart2.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[0]);
                  this.chart3.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[10]);             // sonra eklenecek 2 uçuş kodu birleştiğindepu ile chart edilecek
-                 this.chart4.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[2]);*/
+                 this.chart4.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[2]);
                 maksmx++;
                 minmx++;
 
