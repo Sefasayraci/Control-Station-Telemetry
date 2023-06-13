@@ -420,7 +420,7 @@ namespace tulpar_ground
 
             /*
             progressBar1.Increment(1);
-            //Timerın başlaması ile birlikte progressbarın increment özelliğini      // Prograsbar deneme
+            //Timerın başlaması ile birlikte progressbarın increment özelliğini    
             //kullanıyoruz ve her saniye 1 artıcak şekilde ayarlıyoruz.
             label1.Text = "%" + progressBar1.Value.ToString();
             //Labela progressbarın değerini yazdırıyoruz.
@@ -454,11 +454,12 @@ namespace tulpar_ground
             chart2.ChartAreas[0].AxisX.ScaleView.Zoom(minmx, maksmx);
             chart3.ChartAreas[0].AxisX.ScaleView.Zoom(minmx, maksmx);
             chart4.ChartAreas[0].AxisX.ScaleView.Zoom(minmx, maksmx);
+            
 
-            serialPort1.Write("1");
-            string sonuc = serialPort1.ReadLine();
-            string[] pot = sonuc.Split('/');       // split yıldızdan slasha geçirdim.
-            //  MessageBox.Show("Port Bağlantısı Kesildi", "Bağlantı Hatası", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning);
+                serialPort1.Write("1");
+                string sonuc = serialPort1.ReadLine();
+                string[] pot = sonuc.Split('/');       // split yıldızdan slasha geçirdim.
+                //  MessageBox.Show("Port Bağlantısı Kesildi", "Bağlantı Hatası", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning);
 
 
             satir = dataGridView1.Rows.Add(sonuc);
@@ -499,22 +500,23 @@ namespace tulpar_ground
                    textBox9.Text = pot[2] + "";
                    textBox10.Text = pot[3] + "";
                    textBox11.Text = pot[4] + "";
-                    textBox12.Text = pot[5] + "";
-                    textBox6.Text = pot[5] + "";
-                    textBox7.Text = pot[6] + "";
-                    textBox8.Text = pot[7] + "";
-                    textBox9.Text = pot[8] + "";
-                    textBox10.Text = pot[9] + "";
-                    textBox11.Text = pot[10] + "";
-                    textBox12.Text = pot[11] + "";
+                   textBox12.Text = pot[5] + "";
+                   textBox6.Text = pot[5] + "";
+                   textBox7.Text = pot[6] + "";
+                   textBox8.Text = pot[7] + "";
+                   textBox9.Text = pot[8] + "";
+                   textBox10.Text = pot[9] + "";
+                   textBox11.Text = pot[10] + "";
+                   textBox12.Text = pot[11] + "";
                     // enlem boylam verisi eksik sadece textbox'a eklenecek
 
-                 this.chart1.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[1]);
-                 this.chart2.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[0]);
-                 this.chart3.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[10]);             // sonra eklenecek 2 uçuş kodu birleştiğindepu ile chart edilecek
-                 this.chart4.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[2]);
-                maksmx++;
-                minmx++;
+                         this.chart1.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[1]);
+                         this.chart2.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[0]);
+                         this.chart3.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[10]);             // sonra eklenecek 2 uçuş kodu birleştiğindepu ile chart edilecek
+                         this.chart4.Series[0].Points.AddXY((minmx + maksmx) / 2, pot[2]);
+                
+                            maksmx++;
+                            minmx++;
 
             }
 
