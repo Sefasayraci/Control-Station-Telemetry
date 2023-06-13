@@ -95,8 +95,8 @@ namespace tulpar_ground
              serialPort1.BaudRate = 9600;
             
             // KÜTÜPHANELER BİTTİ GERİYE SADECE KODU DÜZENLEMESİ KALDI YARISI BOŞTA ŞU AN
-            // LİNK: https://www.youtube.com/watch?v=WpfjRaYVId8
-            // LİNK: https://www.youtube.com/watch?v=TxSJJfaAzKg&t=3s
+            
+            
 
             //*****************GMAP OLAYLARI*************************
             //  map.MapProvider = GMapProviders.GoogleMap;
